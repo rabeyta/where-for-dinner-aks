@@ -1,0 +1,31 @@
+id: afed64db-d2ad-4890-8288-c2ec2b64e3bb
+timestamp: 2024-03-08T18:56:16.661Z
+source: TAP-GUI
+username: arobert@vmware.com
+options:
+  bsGitBranch: main
+  projectName: where-for-dinner-aks
+  workloadNamespace: aks
+  serviceNamespace: aks
+  workloadType: web
+  gatewayType: tapscg
+  msgBrokerType: rabbitmq
+  dynamicMsgBroker: true
+  msgbrokerName: msgbroker-where-for-dinner
+  dbType: h2
+  cacheType: inmemCache
+  enableSecurity: false
+  appWorkloadURL: http://where-for-dinner.aks.run.tap.az.ra.tapsme.org
+  ployglotWorkloads: false
+  nativeBuild: true
+  includeBuildToolWrapper: true
+  gatewayName: gateway-where-for-dinner
+  useCuratedAPIs: true
+  dynamicMsgBrokerClass: rabbitmq-unmanaged
+  numRabbitMQClusterNodes: 1
+  bsGitRepository: github.com?owner=rabeyta&repo=where-for-dinner-aks
+accelerator:
+  name: where-for-dinner
+fragments:
+  - name: build-wrapper-maven
+  - name: tap-workload
